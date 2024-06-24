@@ -1,11 +1,13 @@
 from decimal import Decimal, InvalidOperation
 from calculator.commands import Command
+import logging
 
 class AdditionCommand(Command):
     def execute(self, num1=None, num2=None, raise_exception=False):
         try:
             if num1 is None:
                 num1 = input("Enter the first number: ").strip()
+                logging.info("First number entered")
             if num2 is None:
                 num2 = input("Enter the second number: ").strip()
 
