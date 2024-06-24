@@ -24,9 +24,9 @@ def test_app_start_unknown_command(capfd, monkeypatch):
     assert "No such command: unknown_command" in captured.out
 
 def test_app_get_environment_variable():
-    """Testing the environment variables"""
+    """Testing getting the environment variables"""
     calculator = Calculator()
-#   Retrieve the current environment setting
+    #Retrieve the current environment setting
     current_env = calculator.get_environment_variable('ENVIRONMENT')
     # Assert that the current environment is what you expect
     assert current_env in ['DEVELOPMENT', 'TESTING', 'PRODUCTION'], f"Invalid ENVIRONMENT: {current_env}"
