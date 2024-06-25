@@ -11,9 +11,9 @@ def test_multiply_success(capfd):
 def test_multiply_invalid_number(capfd):
     """Test the multiplication command with one valid and one invalid input."""
     command = MultiplicationCommand()
-    command.execute('1.1', 'abc')
+    command.execute('1.2', 'abc')
     out = capfd.readouterr().out
-    assert out.strip() == "Invalid number input: 1.1 or abc is not a valid number. You are in the main menu."
+    assert out.strip() == "Invalid number input: 1.2 and/or abc is not a valid number. You are in the main menu."
 
 def test_multiply_user_input_prompts(monkeypatch, capfd):
     """Test the multiplication command prompts for user input when num1 and num2 are None."""

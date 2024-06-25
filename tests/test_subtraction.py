@@ -13,7 +13,7 @@ def test_subtract_invalid_number(capfd):
     command = SubtractionCommand()
     command.execute('1.1', 'abc')
     out = capfd.readouterr().out
-    assert out.strip() == "Invalid number input: 1.1 or abc is not a valid number. You are in the main menu."
+    assert out.strip() == "Invalid number input: 1.1 and/or abc is not a valid number. You are in the main menu."
 
 def test_subtract_user_input_prompts(monkeypatch, capfd):
     """Test the subtraction command prompts for user input when num1 and num2 are None."""

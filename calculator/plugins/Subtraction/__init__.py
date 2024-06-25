@@ -26,7 +26,7 @@ class SubtractionCommand(Command):
 
         except InvalidOperation:
             logging.error("Invalid number input: %s or %s is not a valid number", num1, num2)
-            print(f"Invalid number input: {num1} or {num2} is not a valid number. You are in the main menu.")
+            print(f"Invalid number input: {num1} and/or {num2} is not a valid number. You are in the main menu.")
         
         except Exception as e:
             logging.exception("An error occurred: %s", e)
