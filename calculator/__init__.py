@@ -36,8 +36,6 @@ class Calculator:
     def get_environment_variable(self, env_var: str = 'ENVIRONMENT'):
         return self.settings.get(env_var, None)
 
-
-
     def load_plugins(self):
         # Dynamically load all plugins in the plugins directory
         plugins_package = 'calculator.plugins'
