@@ -42,10 +42,6 @@ class Calculator:
         # Dynamically load all plugins in the plugins directory
         plugins_package = 'calculator.plugins'
         plugins_path = plugins_package.replace('.', '/')
-
-        if not os.path.exists(plugins_path):
-            logging.warning(f"Plugins directory '{plugins_path}' not found.")
-            return
         
         for _, plugin_name, is_pkg in pkgutil.iter_modules([plugins_path]):
             if is_pkg:
